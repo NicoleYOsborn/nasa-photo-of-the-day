@@ -4,7 +4,15 @@ import Header from './Components/Header'
 import Photo from './Components/Photo'
 import PhotoDetails from './Components/PhotoDetails'
 import axios from 'axios'
+import styled from 'styled-components'
 
+// Style the wrapper div
+
+const WrapperDiv = styled.div `
+  padding: 2%, 5%;
+  background: black;
+  color: white;
+`
 
 function App() {
   const [data, setData] = useState('')
@@ -18,13 +26,13 @@ function App() {
   }, [])
  
   return ( 
-  <div className = "App" > 
+  <WrapperDiv> 
   
   <Header data = {data}/>
   <Photo data = {data}/>
   <PhotoDetails data = {data}/>
   
-  </div>
+  </WrapperDiv>
   );
 }
 
